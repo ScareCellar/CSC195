@@ -8,19 +8,39 @@ using namespace std;
 
 int main()
 {
-	int i = 5;
-	i == 5;
+	//array
+	int arr[5] = { 1,2,3,4,5 };
 
-	char a[5] = { 'S','C','R','U','M' };
+	cout << arr[1] << endl; //should rpint out the value '2'
 
-	//vector list map
 	//vector
-	vector<int> vec = { 1,2,3,4,5 };
+	vector<int> intVector = { 1,2,3,4,5 };
 
+	intVector.pop_back();
+	intVector.push_back(6);
 
+	cout << intVector[4] << endl; //prints out the value of 6
 
-	cout << a[1] << endl;
-	
+	//list
+	list<int> myList = { 1,2,3,4,5 };
 
-	return 0;
+	myList.push_front(0);
+
+	myList.push_back(6);
+
+	for (int x : myList)
+	{
+		cout << x << " " << endl;
+	}
+
+	//map
+	map<string, int> ages;
+
+	ages["Xadia"] = 17;
+	ages["Cameron"] = 18;
+	ages["Alex"] = 19;
+
+	cout << ages["Cameron"] << endl;
+
+	cout << ages["Alex"] << endl;
 }
