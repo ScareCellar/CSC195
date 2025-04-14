@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{06563517-58f7-4d24-b7d1-6b17cfe7d21f}</ProjectGuid>
-    <RootNamespace>PersonDatabase</RootNamespace>
+    <ProjectGuid>{1ed144f0-6e5e-45f0-b0ff-8a0bb191f57c}</ProjectGuid>
+    <RootNamespace>UserDataTypes</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="PersonDatabase.cpp" />
+    <ClCompile Include="..\PersonDatabase\Employee.cpp" />
+    <ClCompile Include="UserDataTypes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Employee.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
