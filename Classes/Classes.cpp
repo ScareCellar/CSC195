@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 #include "VehicleBaseClass.h"
 
 #include "Car.h"
@@ -79,6 +80,7 @@ int main()
 	Database database;
 
 	bool quit = false;
+	string name;
 	while (!quit)
 	{
 		std::cout << "1 - Create\n2 - Display All\n3 - Display by Name\n4 - Display by Type\n5 - Quit\n";
@@ -98,7 +100,7 @@ int main()
 		case 3: // Ask for name, then call database.Display(name) break; 
 			cout << "Please enter a name: ";
 			
-			string name;
+
 			cin >> name;
 			
 			database.Display(name);
