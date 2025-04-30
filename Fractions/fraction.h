@@ -1,28 +1,33 @@
 #pragma once
+#include <string>
 namespace mathlib
 {
+	template<typename T=int>
+
 	class Fraction
 	{
-		unsigned int numerator;
-		unsigned int denominator;
 
-		Fraction(unsigned int numerator, unsigned int denominator)
-		{
-			this->numerator = numerator;
-			if (denominator != 0)
-			{
-				this->denominator = denominator;
-			}
+	public:
+		Fraction(T numerator, T denominator);
 
-		}
+		Fraction<T> Add(Fraction<T> fraction_being_added);
 
-		float Add(Fraction* fraction_being_added)
-		{
-			float fraction1 = this->numerator / this->denominator;
-			float fraction2 = fraction_being_added->numerator / fraction_being_added->denominator;
+		Fraction<T> Subract(Fraction<T> fraction_being_subtracted);
+		
+		Fraction<T> Multiply(Fraction<T>& fraction_being__multiplied);
+		
+		Fraction<T> Divide(Fraction<T> fraction_being_divided);
+		
+		T findGCF(T a, T b);
+		
+		std::string ToString();
 
-			return fraction1 + fraction2;
-		}
+		Fraction<T> Simplify();
 
+		float ToFloat();
+
+	private:
+		T m_numerator;
+		T m_denominator;
 	};
 }

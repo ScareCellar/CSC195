@@ -83,9 +83,9 @@ int main()
 	string name;
 	while (!quit)
 	{
-		std::cout << "1 - Create\n2 - Display All\n3 - Display by Name\n4 - Display by Type\n5 - Quit\n";
+		cout << "1 - Create\n2 - Display All\n3 - Display by Name\n4 - Display by Type\n5 - Quit\n";
 		int choice;
-		std::cin >> choice;
+		cin >> choice;
 		switch (choice)
 		{
 		case 1: // Create object by type break;

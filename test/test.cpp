@@ -1,11 +1,14 @@
-// Fractions.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// test.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int a = 10;
+	int& r = a;
+	r = 20;
+	std::cout << a;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
